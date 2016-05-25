@@ -1,3 +1,5 @@
+// Implement an algorithm to determine if a string has all unique characters. WHat if you cannot use additional data structures?
+
 function isUnique(str) {
 	// Used to keep track of all the characters that have already appeared
 	var checker = 0;
