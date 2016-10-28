@@ -9,10 +9,10 @@
 function isPalPerm(str) {
 	var strInObj = {};
 	var trackOddOccurrence = 0;
-	var preppedStr = str.trim().toLowerCase();
+	var preppedStr = str.replace(/[\s]/g, "").toLowerCase();
 	for(var i = 0; i < preppedStr.length; i++) {
 		if(!strInObj[preppedStr[i]]) {
-			strInObj[preppedStr] = 1;
+			strInObj[preppedStr[i]] = 1;
 		} else {
 			strInObj[preppedStr[i]]++;
 		}
@@ -27,4 +27,5 @@ function isPalPerm(str) {
 	return !(trackOddOccurrence > 1);
 }
 
-isPalPerm("TACt coa");
+console.log(isPalPerm("TACt coa")); // true
+console.log(isPalPerm("ttte")); // false
