@@ -7,6 +7,7 @@ function isUnique(str) {
 	  // Strings assumed to be all in lower case
 		var currentChar = str[i].charCodeAt(0) - 'a'.charCodeAt(0);
 		// << is a bitwise operator which shifts the first operand the specified number of bits to the left
+		// << is a bitwise operator which shifts the first operand the specified number of bits to the left
 		// 1 << 0 --> 100 in binary, which equates to 4
 		// & is also a bitwise operator which returns a number that has the 1 digit at the positions where both numbers have 1
 		if((checker & (1 << currentChar)) > 0) {

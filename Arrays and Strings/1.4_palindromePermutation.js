@@ -17,13 +17,13 @@ function isPalPerm(str) {
 			strInObj[preppedStr[i]]++;
 		}
 	}
-	
+
 	for(var key in strInObj) {
 		if(strInObj[key] % 2 !== 0) {
 			trackOddOccurrence++;
 		}
 	}
-	
+
 	return !(trackOddOccurrence > 1);
 }
 
