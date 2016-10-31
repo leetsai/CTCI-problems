@@ -31,6 +31,7 @@ function oneEditReplace(str1, str2) {
       if(foundDifference) {
         return false;
       }
+      foundDifference = true;
     }
   }
   return true;
