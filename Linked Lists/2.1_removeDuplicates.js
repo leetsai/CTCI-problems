@@ -19,30 +19,15 @@ function removeDuplicates(node) {
 
 function removeDuplicates2(node) {
   let current = node.head;
+  // run while current !== null
   while (current) {
-    let runner = current;
-    while (runner) {
-      if (runner.next && runner.next.value === current.value) {
-        runner.next = runner.next.next;
+    let pointer = current;
+    // run while pointer !== null
+    while (pointer) {
+      if (pointer.next && (current.value === pointer.next.value)) {
+        pointer.next = pointer.next.next;
       } else {
-        runner = runner.next;
-      }
-    }
-    current = current.next;
-  }
-  return node;
-}
-
-
-function removeDuplicates2(node) {
-  let current = node.head;
-  while (current) {
-    let runner = current;
-    while (runner) {
-      if (runner.next && runner.next.value === current.value) {
-        runner.next = runner.next.next
-      } else {
-        runner = runner.next;
+        pointer = pointer.next;
       }
     }
     current = current.next;
